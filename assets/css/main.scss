@@ -28,6 +28,11 @@ $code: Menlo, Monaco, "Courier New", monospace;
 @import "vendor/syntax";
 
 /* STYLES ========================================================================== */
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
 
 html,
 body {
