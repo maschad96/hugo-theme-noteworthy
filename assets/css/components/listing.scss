@@ -1,0 +1,13 @@
+.post-index {
+	&__title {
+	}
+	&__tags {
+		margin-bottom: 1rem;
+	}
+	&__time-to-read {
+		display: block;
+		margin-bottom: 1rem;
+		width: 100%;
+		color: $gray-light;
+	}
+}
