@@ -1,23 +1,27 @@
 {{ define "main" }}
-<a href="{{.Site.BaseURL}}">Back to All Posts</a>
-<h1 class="post-title">{{ .Title }}</h1>
-{{ if .Date }}
-<time>{{ .Date.Format "January 2, 2006" }}</time>
-{{ end }}
-<div>
-	<p>
-		{{ .Content }}
-	</p>
-</div>
-{{ template "_internal/disqus.html" . }}
-
-<div class="page-footer">
-	{{if .Params.tags}}
-	<hr class="footer-divider">
-	{{ range .Params.tags }}
-	<a class="tag" href="/tags/{{ . | urlize }}">#{{.}}</a>
+<main id="main">
+	<a href="{{.Site.BaseURL}}">Back to All Posts</a>
+	<h1 class="post-title">{{ .Title }}</h1>
+	{{ if .Params.subtitle }}
+	<h2 class="post-subtitle">{{ .Params.subtitle }}</h2>
 	{{ end }}
+	{{ if .Date }}
+	<time>{{ .Date.Format "January 2, 2006" }}</time>
 	{{ end }}
-</div>
-
+	<div>
+		<p>
+			{{ .Content }}
+		</p>
+	</div>
+	{{ template "_internal/disqus.html" . }}
+	
+	<div class="page-footer">
+		{{if .Params.tags}}
+		<hr class="footer-divider">
+		{{ range .Params.tags }}
+		<a class="tag" href="/tags/{{ . | urlize }}">#{{.}}</a>
+		{{ end }}
+		{{ end }}
+	</div>
+</main>
 {{end}}

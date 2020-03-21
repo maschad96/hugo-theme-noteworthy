@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="article-content">
+<main class="article-content">
 	{{ if isset .Site.Params "description" }}
 	<div class="description">
 		<p>{{ .Site.Params.Description | markdownify }}</p>
@@ -29,7 +29,7 @@
 		<p class="post-index__summary">{{ .Summary }}</p>
 	</article>
 	{{ end }}
-</div>
+</main>
 <!-- Custom paginator -->
 <div class="paginator">
 	{{ $paginator := .Paginator }}
