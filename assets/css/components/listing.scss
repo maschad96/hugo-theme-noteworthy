@@ -1,13 +1,19 @@
+.article-content time {
+    @extend .is-size-4;
+}
 .post-index {
-	&__title {
-	}
-	&__tags {
-		margin-bottom: 1rem;
-	}
-	&__time-to-read {
-		display: block;
-		margin-bottom: 1rem;
-		width: 100%;
-		color: $gray-light;
-	}
+    &__title {
+        @extend .is-size-3;
+    }
+    &__time-to-read {
+        display: block;
+        margin-bottom: 1rem;
+        width: 100%;
+        color: $gray-light;
+        @extend .is-size-5;
+    }
+    &__tags {
+        margin-bottom: 1rem;
+        @extend .is-size-6;
+    }
 }

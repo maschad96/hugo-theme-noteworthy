@@ -5,9 +5,7 @@
 <time>{{ .Date.Format "January 2, 2006" }}</time>
 {{ end }}
 <div>
-	<p>
-		{{ .Content }}
-	</p>
+	{{ .Content }}
 </div>
 {{ template "_internal/disqus.html" . }}
 

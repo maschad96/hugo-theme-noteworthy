@@ -29,5 +29,8 @@
 	{{ with .OutputFormats.Get "RSS" }}
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 	{{ end }}
+	{{ if .Site.Params.polyfillUrl }}
+	{{ printf `<script type="text/javascript" src="%s"></script>` .Site.Params.polyfillUrl | safeHTML }}
+	{{ end }}
 	{{ template "_internal/google_analytics.html" . }}
 </head>

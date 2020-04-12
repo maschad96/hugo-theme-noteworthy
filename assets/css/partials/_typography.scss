@@ -1,0 +1,39 @@
+$sizes: (
+    1: (
+        font-size: 42px,
+        line-height: 1.57,
+    ),
+    2: (
+        font-size: 33px,
+        line-height: 1.6,
+    ),
+    3: (
+        font-size: 26px,
+        line-height: 1.65,
+    ),
+    4: (
+        font-size: 20px,
+        line-height: 1.7,
+    ),
+    5: (
+        font-size: 16px,
+        line-height: 1.75,
+    ),
+    6: (
+        font-size: 13px,
+        line-height: 1.846,
+    ),
+);
+
+@each $label, $map in $sizes {
+    h#{$label},
+    .is-size-#{$label} {
+        font-size: map-get($map, font-size);
+        line-height: map-get($map, line-height);
+    }
+}
+
+p,
+li {
+    @extend .is-size-5;
+}

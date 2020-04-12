@@ -1,9 +1,9 @@
 {{ define "main" }}
 <div class="article-content">
 	{{ if isset .Site.Params "description" }}
-	<div class="description">
-		<p>{{ .Site.Params.Description | markdownify }}</p>
-	</div>
+	<p class="description">
+		{{ .Site.Params.Description | markdownify }}
+	</p>
 	{{ end }}
 	<!-- Range over the pages and only include the ones that are a post type -->
 	{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
@@ -26,7 +26,9 @@
 		</div>
 
 		{{ end }}
+		{{ if .Summary }}
 		<p class="post-index__summary">{{ .Summary }}</p>
+		{{ end }}
 	</article>
 	{{ end }}
 </div>
