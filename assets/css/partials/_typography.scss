@@ -37,3 +37,7 @@ p,
 li {
     @extend .is-size-5;
 }
+
+code {
+    overflow-wrap: break-word;
+}

@@ -11,4 +11,4 @@ function wrapTable() {
     }
 }
 
-document.
+document.addEventListener('DOMContentReady', wrapTable());
